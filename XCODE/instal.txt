@@ -3,3 +3,32 @@ i had it installed already bt i have not explorred it perfectly to explore its c
 to check if installed : /usr/bin/xcodebuild -version
 
 i have XCODE 10.1
+
+
+about xcode : 
+xcode has everything that a great developer needs .
+provides unified workflow for user interface design , coding , testing , debugging.
+XCODE IDE combined with swift programming language.
+xcode contains :
+xcode IDE 
+objective c and Swift comilers 
+instruments analysis tools 
+simulators 
+SDKs
+
+
+::: innovative tools 
+-swift
+-playgrounds to experiment with swift
+-interface builder displays picture perfect interface for each target device and can zoom at any level 
+-view debugging shows a 3D stack of all your app's user interface view layers at runtime 
+-assistant editor show content related to your primary task 
+-live issues
+- source control navigator
+
+::: interface builder 
+-story boards let you arrange complete flow of screens within your app 
+- create connections from your GUI designs directly to the related source code
+
+::: insturments 
+-compare CPU ,hard disk , memory , GPU performance as graphical tracks 
