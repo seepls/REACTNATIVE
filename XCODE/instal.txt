@@ -1,1 +1,5 @@
 i had it installed already bt i have not explorred it perfectly to explore its content . 
+
+to check if installed : /usr/bin/xcodebuild -version
+
+i have XCODE 10.1
