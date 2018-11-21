@@ -1,0 +1,16 @@
+facebook's react native :: 
+
+1.build social apps using Java script and run natively on mobile platforms .
+2.The Facebook functionality is provided through a single NPM package so you 
+can use it for both platforms without downloading any extra packages.
+
+
+getting started :
+1.node installation 
+2. use npm to install the Expo CLI command line utility::npm install -g expo-cli
+ //npm is a package manger for JavaScript programming language, 
+ //and the default package manager for Node.js Javascript runtime environment.
+ 
+2. install homebrew
+3.install watchman
+
