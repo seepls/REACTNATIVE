@@ -1,0 +1,14 @@
+React native : facebook's Javascript framework for building mobile application 
+: knowledge of : react and JavaScript 
+
+:: how to make 3rd party libraries 
+react native to extend Java or Objective c libraries 
+
+prerequisites :
+working knowledge of react .
+ read a tutorial on react : or may be 2 
+  - most important role of : props and state 
+  - component life cycle 
+  - create react components
+  - mordern javascript syntax , JSX. 
+  
