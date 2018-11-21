@@ -1,0 +1,24 @@
+:::what is react native ?
+
+React Native : java script framework .
+
+based on react : facebook's JavaScript library for building user interfaces .
+Similar to react for web . react native applications are written : mixture of 
+1.javascript 2.XML-esque markup :: JSX
+
+react native bridge : envokes native rendering APIs in ObjectiveC or JAVA
+hence my application will render using real mobile UI component 
+
+reactnative exposes javascript interfaces for platform APIs , so that the app can access platform features like , camera or user's location
+
+::: Advantages of reactnative :
+
+-reactnative renders using its host platform standard rendering API :: distingueshes it from Cordova or Ionic 
+- it actually translates your markup to real , native UI elements , maximising existing means of rendering views on whateer platform you are working with 
+- react works separately from the main UI thread . 
+- update cycle in reactNative same as react : when props or state change , reactnative rerenders the views .
+
+::: difference 
+major difference : reactnative does all this by maximizing the usage of the UI libraires of the host rather than HTML and CSS markup
+
+react native improvement over normal mobile app development : developer experience and cross-platform development potential 
