@@ -1,0 +1,148 @@
+c2 :: working with react native 
+
+aim:
+1.bridge
+2.how react native works under the hood 
+3.how react native components differ from their web counter parts 
+
+::::::: how does react native work ?
+
+react's concept of Virtual DOM(Document object model) !
+ 
+ the virtual DOM acts as a layer between developers description of how things out to look and work done to actually render application on page
+ 
+ 1. to render interactive user interfaces in a browser , developers must edit the browser's DOM . which is expensive !
+ so  rather than directly render changes on the page , react computes necessary changes in-memory and re renders the minimal amount necessary 
+ 
+ in context of react on web : most people think of virtual DOM as performance optimization
+ real power lies in power of abstraction.
+ 
+ places a clean abstraction layer between developer's code and actual rendering opens up a lot of interesting possibilities
+ 
+ 
+ bt it would be so much better if react could render to a target other than browser's DOM 
+ thats what it does 
+ instead of rendering to browser's DOM 
+ react native invokes : objectiveC API's to render to iOS 
+ and Java APIs to render Android components 
+ 
+ others cross platform app development option end up rendering web based views 
+ 
+ all because of the BRIDGE :
+ provides react with an interface into the host platform's native UI elements
+ 
+ React components return markup from their render function :: which describes how they should look 
+ with react for web this translates directly to the browser's DOM
+ for react native , this markup is translated to suit the hist platform . so a <view> might become a iOS specific UIView 
+ 
+ now the bridge can point to iOS and Android , it can point to what ever platform just some one has to write the bridge 
+ 
+ hence react native can also be used to make desktop application if someone adds bridge for windows and ubuntu etc
+ 
+ 
+ ::::: rendering lifecycle 
+ react :
+ 1.begins by mounting the react components :
+ 
+ page renders -> mounts the react components to the DOM -> render react components 
+ 
+ for the render stage : returns the HTML markup from a react components' render method . 
+ react renders directly into page as necessary.
+ 
+ : rerendering components in react
+ 1.state/props change -> compute difference in virtual DOM -> rerender react component
+ 
+ 
+ 
+ react native :
+ same life cycle with different rendering process : because react native depends on the bridge 
+ the bridge translates JS calls and invokes the host platform's underlying APIs and UI elements .
+ React native does not run on the main UI thread , it can perform these asynchronous calls without impacting user experience 
+ 
+ 
+ 
+ ::: creating components in react native :
+ all react code lives in react components .
+ react native components same as react components bt with differnece around the rendering and styling 
+ 1. working with views 
+ in react for web : render HTML elements(<div> , <p> , <span>, <a> )
+ with react native : 
+ all components replaced by platform specific react components .
+ <view> : cross platform view:: which is a simple and flexible UI element analogous to <div>
+ so <view> : UIView on iOS and View on android 
+ 
+ 
+ 
+ now because all of our UI elements are now react components rather than basic HTML , you will have to
+ explicitly import each components you want to use.
+ 
+ RNTester application :: allows you to view all the supported UI components :
+   
+   
+ in react : we have a mix of react components:
+ some manage logic and their child components 
+ while others render raw markup .
+ if you want to reuse code when working in react native , maintaining difference between these components becomes critical 
+ 
+ so a <DatePickerIOS> cannot be reused for android but a component that encapsulates the logic can be reused .
+ 
+ ::: using JSX
+ 
+ we write our views using JSX  , combining markup  , JavaScript that controls it  , into a single file .
+ 
+ :: JSX priortize sepration of concerns over sepration of technologies .
+in react native : .js files is JSX files.
+
+//if you have been using vanilla javascript when working with react for the web . you will have to transition to JSX syntax
+for your work in ReactNative .
+
+
+
+:::: styling native components : 
+
+- on web we style  'react components' using CSS . 
+just as any HTML component. CSS is a must to learn . 
+react usually does not effect you will write CSS .
+react native makes it easier to dynamically build class names based on props and state.
+
+- non-web platforms have a wide approach of layout and styling .
+when we work with react native we follow a standard approach  to styling .
+
+part of bridge between react and the host platform heavily trimmed subset of CSS.
+this relies on flexbox for layout . 
+
+react native provides utilities for creating and extending style object .
+idea is to work with style objects than style sheets 
+
+
+::: host platform APIs 
+
+difference in react and react-native is the way we think about host platform APIs 
+
+
+: platform specific APIs 
+Mobile APIs include evrything from data storage to location services to accessing hardware .
+
+
+// SAY :: INTERFACE BETWEEN VIRTUAL REALITY HEADSET AND REACTNATIVE 
+
+isolating and encapsulating platform specific functionality components will bring added flexibility .
+if you want to share code between native and react native you need to make sure that things like DOM does not exist .
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
