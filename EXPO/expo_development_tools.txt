@@ -1,0 +1,6 @@
+1.expo client:  Run your projects before you deploy. Open projects by scanning QR codes. 
+
+2.expo CLI :Serve, share, build, and publish Expo projects. 
+
+3.expo snack: Snack lets you to run complete React Native projects in the browser. 
+4.expo SDK: Access native cross-platform device APIs in your Expo project. 
