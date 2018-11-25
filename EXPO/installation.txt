@@ -1,0 +1,16 @@
+two tools needed in order to develope an app with EXPO 
+- a local development tool
+- mobile client to open your app 
+
+
+local development tool :
+Expo CLI : ( command line interface )
+
+has CLI and GUI
+
+With Expo Dev Tools you can quickly set up your test devices, view logs and more.
+When you serve your project with Expo CLI, it generates a development URL that you can open in Expo Client to preview your app. 
+
+also need to install watchman :
+ Watchman watches files and records when they change, then triggers actions in response to this, 
+ and it's used internally by React Native.
