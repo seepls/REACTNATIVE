@@ -1,0 +1,107 @@
+/*: var declaration 
+: functions 
+etc
+
+
+
+in client side JS :
+JS code can be embedded in HTML files using the  <script> tag 
+
+e.i
+*/
+<html>
+<head>
+<script src = "library.js"></script>
+</head>
+<body>
+<p> ... </p>
+<script>
+....
+</script>
+<p>... </p>
+</body>
+</html>
+
+
+
+//some global function of client-side JS :
+
+<script>
+function moveon(){
+var answer = confirm("ready ! ");
+if(answer) window.location("http://google.com");
+}
+setTimeout(moveon,60000) // run function above 60000ms from now
+</script>
+
+
+/*::: scripting HTML document  : scripting HTML document content
+shows you : how to select particular HTML elements within a script
+how to set HTML attributes 
+how to alter content of those elements 
+how to add new elements to the document */
+
+function debug(msg){
+var log = document.getElementById("debuglog");
+if(!log){
+ log = document.createElement("div");
+ log.id = "debugging";
+ log.innerHTML= "<h1>Debug Log</h1>";
+ document.body.appendChild(log);
+ 
+}
+
+var pre = document.createElement("pre");
+var Text = document.createTextNode(msg);
+pre.appendChild(text);
+log.appendChild(pre);
+
+}
+
+
+/*::: scripting CSS doc.: 
+how can you use JS with CSS styles 
+is done with the style or class attributes of the HTML elements */
+
+function hide(e,reflow){
+if(reflow){
+e.style.display= "none";
+}
+else{
+ e.style.visibility = "hidden";
+ }
+}
+
+function highlights(e){
+if(!e.className) e.className= "hilite";
+else e.className += "hilite";
+}
+
+
+/*:::
+JS can script the HTML and CSS 
+but can also define behavior for those documents with event handlers
+
+Handling Events : explains how you can define and register event handlers and how browser invokes them when event occur
+:: event handling == behaviour of webpages
+
+
+to simplify Client side JS : use client side library or framework 
+
+best : JQuery 
+easy-to-use API :
+-scripting document
+-presentation
+-behavior
+
+
+
+
+
+
+*/
+
+
+
+
+
