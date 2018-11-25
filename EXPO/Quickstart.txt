@@ -1,0 +1,11 @@
+expo is set of tools ,libraries ,and services helps to build native iOS and Android  in JS .
+
+Expo apps are react native apps that contain Expo SDK .
+the SDK is a native-and-JS library that provides access to devices system functionality 
+things like the camera, contacts, local storage, and other hardware.
+
+hence you dont have to write any native code. 
+pure JS project ! can run on any environment with expo SDK 
+!!!!Expo can manage your Assets for you, it can take care of Push Notifications for you, 
+and it can build native binaries which are ready to deploy to the app store.
+
