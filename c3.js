@@ -39,8 +39,8 @@ the directory structure would be :
 |-_tests_
 |-android
 |-app.json
-|-index.android.js // my react code
-|-index.ios.js. // my react code 
+|-index.android.js // my react native code
+|-index.ios.js. // my react native code 
 |-ios 
 |-node_modules.  // consists of the dependencies installed via npm 
 |-package.json 
@@ -136,16 +136,19 @@ const styles = StyleSheet.create({
             
 
 
-you MUST IMPORT every native-provided module you work with . 
+you MUST IMPORT every native-provided module you work with , in this SYNTAX !
 
 react <div> == <Text> in react native 
  react <span> == <View> in react native 
  
+
  
- all styling in react native done using style objects than stylesheets
- done using StyleSheet library 
  
- Layout logi handled using  flexbox .
+ all styling in react native done using style objects than stylesheets.
+ standard method of handling styling : Style Sheet library 
+ 
+ Layout logic handled using  flexbox .
+ we build layouts with flexbox .
  
 
 
