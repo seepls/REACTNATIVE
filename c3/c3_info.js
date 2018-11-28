@@ -155,6 +155,32 @@ react <div> == <Text> in react native
 
 
 
+now we build our weather App:
+
+aim :: 
+1.stylesheets
+2.flexbox
+3.network communication
+4.user input 
+5. images into a useful app 
+6.deploy on a device
+
+
+what we looking for ?
+-text field : where user can enter a zip code
+- fetch data from OpenWeatherMap 
+- diplays the current weather 
+
+fetching data from the web : 
+wont use jQuery to send AJAX requests from mobile .
+instead , react native impliments Fetch API .
+
+syntax :
+fetch('http://www.somesite.com')
+ .then((response)=>response.text())
+ .then((responseText)=>{
+  console.log(responseText);
+});
 
 
 
