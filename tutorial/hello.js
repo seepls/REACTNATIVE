@@ -94,5 +94,38 @@ return(
 });
  }
 
+//variable in inline style sheet
 
+import React,{ Components} from 'react';
+import {Text , StyleSheet} from 'react-native';
+const a = 100;
+export default class myApp extends Component{
+ render(){
+   return(
+     <Text style = {{ fontSize: a}}>WElcome</Text>
+    );
+ }
+}
+
+// variable in internal styleSheet
+
+import React, {Component} from 'react';
+import { Text , StyleSheet} from 'react-native';
+const clr = "pink";
+export default class myApp extends Component{
+ render(){
+  return(
+   <Text style = {styles.styleName} Internal Style</Text>
+   );
+ }
+}
+const styles = StyleSheet.create({
+  styleName : { 
+    fontSize : 35 ,
+   color : clr 
+  }
+});
+
+
+ 
   
