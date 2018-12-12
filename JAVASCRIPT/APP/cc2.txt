@@ -1,0 +1,77 @@
+JS instructions : statements seprarted by ; 
+whitespace : spaces, tabs and newline characters
+input elements : tokens , control statements , comments / whitespaces 
+somekeyword and literals automatically add ;  // but one must add it anyways 
+
+comments : // /*...*/
+
+declarations : 
+1. let : block scope variable , initializing to a value 
+2. var : declares a variable , may be initiallizing it to a value
+3. const : read-only named constant 
+
+names of variables : identifier 
+
+variable declared using var statement with no initialization has the value : undefined 
+attempt to access undeclared variable : reference error
+
+: to determine if a variable has a value :
+
+var input ;
+if( input === undefined){
+ doThis();
+}else {
+ doThat();
+}
+
+// undefined value behaves as false , when used in boolean context 
+// undefined value turns to NaN when used in numeric sense 
+
+
+// null = 0 in numeric context and false when boolean
+
+
+concept of HOISTING :
+ you can refer to variables declared later  :
+ variables are lifted to the top of the function 
+ but variables that are hoisted will return undefiend value
+ hence the best option be to place all var declaration as top as posible .
+ let declaration wont be hoisted at the top 
+ 
+ in function only function declaration gets hoisted to the top and not the function expression
+ 
+ 
+DATA TYPES:
+1.boolean
+2.null
+3.undefined
+4.number
+5.string
+6.symbol
+7. object: named container for values
+
+
+
+converting string to number :
+parseInt()
+parseFloat()
+
+
+ literals : 
+ 1. Array : 
+ 2. boolean : 
+   boolean object and boolean values are different :: 
+   boolean object is a wrapper around primitive boolean data type 
+ 3. integer 
+ 4. floating point 
+ 5. object literal : is a list of zero or more pairs of property names and associated values of an object  enclosed in curly bracket 
+ 6. regExp literals : pattern encosed between slashes 
+ 7. string 
+ 
+
+
+ 
+  
+
+
+
