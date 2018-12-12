@@ -36,5 +36,18 @@ alert('Number of options selected ' + howMany(document.selectForm.musicTypes))
 });
 </script>
 
+// do ... while 
+
+do 
+  statement
+while (condition) ;
+ var i = 0 ; 
+do {
+  i + = 1 ;
+  console.log(i);
+} while(i < 5) ;
+
+
+
   
     
