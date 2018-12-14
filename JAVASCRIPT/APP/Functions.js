@@ -16,4 +16,43 @@ function square ( number ){
  //power 
  var power = function pow( x , y ) { return y <2 ? x ; x * pow(x , y-1)};
  
+ /*recursions :
+ 
+ refer to itself 
+ 3 ways to refer to itself 
+ 1. function's name 
+ 2. argument callee
+ 3. an in-scope variable that refers to the function*/
+ 
+ var foo = function bar(){
+   // statements 
+                                
+ }
+                      
+/* all the following equivalent :
+ 1. bar()
+ 2. argument.callee
+ 3 . foo ()
+ 
+ loop and recursion pretty similar :
+                                 
+    code 1 : */
+ var x = 0 ;
+ while ( x <10 ) {
+ x++;}
+                                
+                                                        
+    //code 2 :           
+    function loop(x){
+     if(x >=10)
+      return ;
+    loop(x+1);}loop(0);
+                                
+     
+                                 
+                                 
+  
+ 
+                                
+                             
  
