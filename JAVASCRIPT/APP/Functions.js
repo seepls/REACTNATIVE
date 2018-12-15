@@ -49,6 +49,43 @@ function square ( number ){
     loop(x+1);}loop(0);
                                 
      
+ /* NESTED FUNCTION AND CLOSURE 
+ the nested function is private to the outter function 
+ nested function can inherit the arguments and variables of its containing function 
+ inner function contains scope of the outter function
+ 
+ summary : 
+ 1 . inner function can be accessed only from statements in the outter function
+ 2. inner function forms a closure : inner function can use arguments and variables of outter function 
+ while outer function cannot use arguments and variables of inner function 
+ */
+ function addSquare (a, b ){
+  function square(x){
+      return x*x ;
+              } return square(a) + square(b) ;
+ 
+      }
+ 
+// PREDEFINED FUNCTIONS !! 
+ 
+ eval() : evaluates JS code written as string
+ uneval() : creats string representation of source code of an object 
+ isFinite () : evaluates wheather a passed value is finite 
+ isNaN() : determines weather a value is NaN or not
+ // not a number
+ 
+ parseFloat() : passes a string gets a float number 
+ parseInt() : 
+ decodeURI () : decodes a uniform URI ( uniform resource identifier ) , created by encodeURI 
+ decodeURIComponent() : 
+ encodeURI(): 
+ encodeURIComponent : 
+ escape() : 
+ unescape() : 
+ 
+                             
+ 
+ 
                                  
                                  
   
