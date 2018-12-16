@@ -1,0 +1,55 @@
+string type used to represent textual data . set of elements of 16 bit unsigned integer value 
+each element of a string occupies a position in string .
+first element is at index 0, next at 1 and so on 
+length of a string is the number of elements in it . 
+can create string literals using string literals or string objects 
+
+STRING OBJECT ::::
+String object is wrapper around the string primitive data type .
+var s = new String ("foo");
+console.log(s);
+typeof s ; // returns object 
+
+var s1 = " 2+ 2 " ; // creates a string literal value 
+var s2 = new String("2 +2 ") ; creates a string object 
+eval(s1 ) ; returns 4 
+eval(s2);  returns " 2 +2 " 
+
+String object has one property length = number of characters in the string 
+
+so 
+var my = " hello world ! " ;
+var x = my.length ; // x =  15 
+
+String object has varity of methods 
+
+charAt 
+charCodeAt
+codePointAt
+indexOf
+lastIndexOf
+startswith
+endswith
+includes
+concat
+fromCharCode
+fromCodePoint
+split
+slice
+substring
+substr
+match
+replace
+search
+toLowerCase
+toUpperCase
+normalize
+repeat
+trim
+
+
+MultiLine template literals 
+
+Template literals are string literals allowing 
+embedded expressions 
+
