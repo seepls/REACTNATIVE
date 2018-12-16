@@ -1,0 +1,108 @@
+number type has 3 symbolic values : 
+1. infinity 
+2. - infinity
+3.Nan
+
+4 types of number literals : 
+1 . decimal 
+2.binary
+3.octal
+4.hexadecimal
+
+
+Number Object :
+built-in Number Object has properties for numerical constants such as 
+-maximum value,
+-not-a-number 
+-infinity 
+
+// properties of a number object :::::
+var biggestNum = Number.MAX_VALUE ;
+var smallestNum = Number.MIN_VALUE ;
+var infiniteNum = Number.POSITIVE_INFINITY ;
+var negInfiniteNum = Number.NEGATIVE_INFINITY ;
+var notANum = Number.NaN;
+Number.EPSILON = 
+Number.MIN_SAFE_INTEGER 
+Number.MAX_SAFE_INTEGER 
+
+Methods of Number 
+
+1.Number.parseFloat()
+2.Number.parseInt()
+3.Number.isFinite()
+4.Number.isInteger()
+5.Number.isNaN()
+6.Number.isSafeInteger ()
+
+
+number prototype: provides methods for retrieving information from Number Objects in various formats 
+Methods of Number.prototype 
+
+1.toExponential() : Returns a string representing the number in exponential notation
+2. toFixed() : returns a string representing the number in fixed-point notation 
+3.toPrecision() : returns a  string representing the number to a specified precision in fixed-point notation 
+
+Math object : 
+built-in Math Object has properties and methods for mathematical constants and functions 
+Math.PI
+
+sllry : mathematical functions are methods of Math 
+- trignometric 
+- logarithmic 
+- exponential 
+etc
+
+// you never create a Math object of ur own and always use built-in Math object 
+
+
+
+DATE OBJECT : 
+use the Date Object and its methods to work with dates and times in your applications 
+
+creating a dtae object : 
+syntax :: 
+var dateObjectName = new Date ( [parameters]);
+calling Date without new keyword converts provided date to string representation 
+
+Methods of Date Object :: 
+set methods 
+get methods 
+to methods : returning string values from Date objects 
+parse and UTC methods 
+
+
+example : JSClock()
+
+function JSClock(){
+var time = new Date() ; // new  Date object 
+var houe = time.getHours(); // current time 
+var minute = time.getMinutes();
+var second = time.getSeconds();
+var temp= " " +((hour >12 )?hour -12 : hour) ;
+if( hour ==0 ) {
+  temp = "12";
+  temp +=((minute < 10) ? ":0" : ":") + minute;
+  temp += ((second < 10) ? " :0" : ":" ) + second ;
+  temp += (hour > = 12 )? "P.M" : " A.M";
+  return temp ; 
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
