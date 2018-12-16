@@ -61,6 +61,8 @@ useful with classes to call parent constructor
 super([arguments]);
 super.functionOnPrent([argument]);
 
+spread operator : 
+allows expression to be expanded in places where multiple arguments or multiple elements are expected 
 
 
 
