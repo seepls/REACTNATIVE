@@ -1,0 +1,13 @@
+patterns used to match character combinations in strings 
+in JS regular expressions are also objects 
+patterns used with exec and test 
+method of RegExp , and with match , replace , search and split methods of string
+
+var re = /ab +c /;
+
+calling the constructor function of RegExp object :
+var re = new RegExp(" ab + c ");
+using constructor function provides runtime compilation of regular expression 
+use the constructor function when you know that the regular expression pattern will be changing 
+
+
