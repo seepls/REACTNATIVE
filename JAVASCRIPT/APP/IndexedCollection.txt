@@ -1,0 +1,45 @@
+data that are ordered by an index value :
+1.Array Object :::
+
+array is an ordered set of values that you refer to with a name and an index 
+
+iterating over arrays :: 
+var divs = document.getElementByTagName('div');
+for ( var i = 0 , div; div = divs[i] ; i++){
+}
+
+Array methods 
+1. concat : joins two arrays and returns a new array 
+2. join :  joins all element of an array into a string 
+3. push() : adds one or more elements to end of the array and returns the resulting length of the array 
+4. pop(): removes and returns the last element of the array 
+5. shift() : removes the first element from the array and returns that element
+6. unshift() : adds one or more element to the front .and returns the new length 
+7.slice(start_index , upto_index) : extracts a section of the array and returns a new array 
+8.splice()
+9.reverse():
+10. sort():
+    sort can also take a call back function to determine how array elements are compared . function compares two values and returns 
+    one of the three values 
+11. indexOf(searchElement , fromIndex )
+12. lastIndexOf( searchElement , fromIndex )
+13.forEach( callback , thisObject ) 
+14. map ( callback , thisObject ) 
+15. filter 
+16. every 
+17. some 
+
+
+methods above take a callback are known as iterative methods , because they iterate over the entire array in some fashion 
+each one takes an optional second argyment called thisObject .
+thisObject becomes the value of this keyword 
+inside the body of the call back function .
+
+CALLBACK function called with 3 arguments :
+- value of the current item 
+- array index 
+- reference to the array itself 
+
+
+
+
