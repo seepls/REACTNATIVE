@@ -1,0 +1,33 @@
+collection of data ordered by key : 
+Map and Set objects contains elements which are iterable in the order of insertion 
+
+Maps : 
+Map object 
+to map values to values 
+A map object is a simple key/value map and can iterate its elements in insertion order 
+can use a for .. of loop to return an array of [ key , value ] for each iteration 
+
+var sayings = new Map () ;
+sayings.set("dog" , "woof");
+sayings.set("cat" , "meow");
+sayings.set("elephant" , " toot" );
+sayings.size; // 3 
+sayings.get("fox");
+sayings.has("bird");// false 
+sayings.delete ("dog");
+sayings.has("dog"); // false 
+
+for ( var [key, value] of sayings ){
+console.log(key + " goes " + value );
+}
+
+sayings.clear();
+sayings.size ; 
+
+
+object and map compared :::
+-objects allow to set keys to value .
+-retrieve those values 
+-delete keys
+- detect if something is stored at a key 
+
