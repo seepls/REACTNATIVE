@@ -1,0 +1,27 @@
+JS based on simple object-based paradigm .
+object is a collection of properties , property is a association between name and a value . 
+A property's value can be a function , in that case the property is known as a method .
+in addition to objects that are predefined in the browser , you can define your own objects 
+
+object overview :::
+object properties :
+property can be explained as a variable that is attached to the object . 
+objectName.propertyName
+
+
+var myCar = new Object();
+myCar.make  = "FORD" ;
+myCar.model = "Mustang" ;
+myCar.year = 1969 ;
+
+unassigned properties of an object are undefined 
+objects are sometimes called associative arrays , so the above can be done as :
+
+myCar["make"] = "Ford" ;
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
+
+An object property name can be any valid JS string :
+
+Enumerating all properties of an object :
+
