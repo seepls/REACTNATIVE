@@ -31,3 +31,108 @@ object and map compared :::
 -delete keys
 - detect if something is stored at a key 
 
+-- keys of an object are strings , where they can be any value for a map 
+-- size of map can be retrieved easily where as you have to manually keep track of size of object
+-- iteraion of maps is in insertion order 
+-- object has prototypes so that there are default keys in the map 
+by passed using :
+ map = Object.create(null)
+ 
+ 
+tips to decide  to use a map or an object : 
+ 
+-- use maps over objects when keys are unknown until run time , and when all keys are the same type and value are the same type
+-- use maps in case if there is a need to store primitive values as keys because objects treat each other as string weather its a number value , boolean value or any other primitive value 
+
+
+weakMap object: 
+collection of key/value pairs in which keys are objects only and values can be arbitary values .
+if there is no other reference to the object anymore then the weakMap API is same as Map API
+use case of weakMap object is : 
+- store private data for an object or to hide implimentation details 
+- private data and methods belong inside the object and are stored in the privates of WeakMap object
+everything exposed on the instance and prototype is public ;
+everything else is inaccessible from the outside  , because private is not exposed from the module 
+
+const privates = new WeakMap();
+function public(){
+ const me = {
+ // private data goes here 
+ };
+  privates.set(this,me);
+  }
+  
+  Public.prototype.method = function(){
+  const me = privates.get(this);
+  // do stuff with private data here
+  };
+  module.exports =Public ;
+  
+  
+  SETS :
+  
+  set object 
+  Set object are collection of values . you can iterate its elements in insertion order . A value in a set may only occur once ; it is unique in the set collection 
+  
+  basic operations with sets shown ::
+  var mySet = new Set();
+  mySet.add(1);
+  mySet.add("smriti");
+  mySet.add("foo");
+  
+  mySet.has(1); // true 
+  mySet.delete("foo");
+  mySet.size ; // 2 
+  for (let item of mySet) console.log(item);
+  //1 
+  // "smriti"
+  
+  
+  
+  
+  
+  converting between Array and set :
+  create array from set using Array.from or the spread operator 
+  set constructor accepts an Array to convert in the other direction .
+  as Set object stores unique values , any duplicate elements are deleted when converting
+  
+  Array.from(mySet);
+  my set2 = new Set([1 ,2 ,3 ,4 ]);
+  
+  Array and set compared :
+  set of elements stored in arrays in JS in lot of situations 
+  advantage of new Set objects :
+  - checking of an element exists in an collection using indexOf for arrays is slow 
+  - set objects let you delete elements by their value. with an array you would have to splice based on elements index
+  - value NaN cannot be found by indexOf in array
+  - Set objects store unique value , dont have to keep track of duplicate 
+  
+  
+  WeakSet object :::
+  collection of objects 
+  an object in the weakSet may only ocuur once . unique and objects are not enumerable 
+  main difference to the set object :
+  - in contrast to Sets , WeakSet collections of objects only and not arbitary values of any type
+  - WeakSet is weak : refrences to objects in the collection are held weakly .there is no list of current objects stored in the collection . weak sets are not enumerable .
+ 
+ WeakSet objects are llimited and will not leak memory so it can be safe to use DOM elements as key and mark them for tracking purposes 
+ 
+ 
+ key and value equality of map and set :::
+ key equality of map objects and the value equality of set objects are based on : same-value-zero algorithm
+ 
+-0 and +0 are equal 
+
+Nan equals itself 
+  
+  
+  
+
+
+
+
+
+
+
+
+
