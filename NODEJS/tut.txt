@@ -1,0 +1,38 @@
+1. open source server environment
+2.  allows to run JS on server
+
+ common task for a web server can be to open a file on the server and return the content to the client.
+ 
+ comparing : PHP /ASP with Node.js :: handling file request
+ PHP :
+ -send task to computer file system 
+ -wait while file system open and reads the file 
+ -return content to client 
+ -ready to handle the next request
+  
+ Node.js
+ - send task to computer file system 
+ - ready to handle the next request
+ - when file system opened and read the file retrns to the client 
+ 
+ Node.js eliminates the wait , continues the next request
+ 
+ runs - single threaded , non-blocking , asynchrounous programming 
+  what can Node.js do > 
+   > dynamic pages 
+   > can create , read , write , open , delete and close files on server 
+   > collect from data
+   > add, delete and modify data in your database
+   
+ node.js files contains 
+ - tasks executed on certain events
+ - node.js file have extension .js 
+ 
+ 
+ Node.js modules : 
+ modules same as JS libraries 
+   To include a module, use the require() function with the name of the module:
+   syntax : eg : var http = require('http');
+   
+  https://www.w3schools.com/nodejs/nodejs_http.asp
+ 
