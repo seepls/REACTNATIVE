@@ -1,0 +1,8 @@
+1.ASYNC :utility module that provides straight-forward , powerful function for working with asynchronous js 
+2.BROWSERIFY :  recursively analyze all require call in your app , in order to build a bundle you can serve up to in a single < script> tag 
+3.BOWER : package manager for the web . fetching and installing packages from all over  , taking care of hunting ,finding , downloading and saving the stuff you are looking for 
+4.BACKBONE :  gives structure to the web app  providing modles with key-value binding and custom events  , 
+collection with a rich API of enumerble functions 
+5.csv : csv module has four sub-modules which provides csv generation , parsing , transformation ,and serialization for Node.js
+6.debug : debugging utility 
+7.EXPRESS :
