@@ -1,0 +1,28 @@
+front-end lib developed by facebook 
+handles the view layer of web and mobile apps 
+reusable UI components
+
+React features : 
+1. JSX : JS syntax extension .
+2.Components : everything is component
+3.unidirectional data flow and flux : React impliments one way data flow , flux is a pattern that helps keeping your data unidirectional
+4.licence 
+
+advatanges :
+1. uses virtual DOM which is JS object , virtual DOM fatser than regular DOM 
+2. can be used with client and server side 
+3. component and data pattern helps being sorted on purpose 
+
+setup : 
+NodeJS is the platform needed for ReactJS development 
+
+
+react uses JSX for templating 
+instead of regular JS .
+faster because it performs optimization while compiling code to JS 
+
+state : is a place where data comes from 
+main difference between state and props : 
+props are immutable 
+
+
