@@ -1,0 +1,226 @@
+The Life of a Component 
+
+1. Bare Minimum :: 
+var MyComponent   = React.createClass ({
+   /* specs */
+});
+
+here specs must have a render () and other optional methods and properties 
+
+var Component  = React.createClass ({
+  render : function(){
+   return React.DOM.span(null , " I am so customn ");
+}
+});
+
+the render function must return a react component 
+
+custom component : 
+<html>
+ <head>
+ </head>
+ <body>
+   <div id = "app" >
+      <span data-reactid = ".0"> I am so custom </span>
+   </div>
+   <script src = "react/build/react.js"></script>
+   <script src = "react/build/react-dom.js"></script>
+   <script>
+           var Component = React.createClass ({
+            render : function() {
+              return React.DOM.span(null , "I am so customn" ) ;
+              }
+            });
+            ReactDOM.render(
+            React.createElement(Component),
+            document.getElementById("app")
+            );
+            
+     </script>
+   </body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ ways to create an " instance " of your component 
+ 1. React.createElement()
+ 2. use factory 
+ 
+ var ComponentFactory  = React.createFactory(Component);
+ ReactDOM.render(
+  ComponentFactory(),
+  document.getElementById("app")
+  );
+  
+  
+  
+Properties :
+
+all properties available via , this.props 
+var Component = React.createClass ({
+ render : function(){
+     return React.DOM.span ( null , "My name is " + this.props.name );
+     }
+     });
+  ReactDOM.render (
+   React.createElement(Component , {
+    name : "Bob" ,
+    }),
+    document.getElementById("app")
+    );
+    
+    
+Properties are useful to carry on configration from parent components to children . 
+
+
+
+
+using component properties : 
+
+<html>
+ <head>
+ </head>
+ <body>
+   <div id = "app">
+      <span data-reactid = ".0"><My name is Smriti </span>
+   </div>
+   <script src = "react /build /react.js" ></script>
+   <script src = "react/build/react-dom.js"> < /script>
+   <script>
+           var Component =React.createClass({
+            render : function(){
+              return React.DOM.span( null , "My name is " + this.props.name );
+              }
+            });
+            ReactDOM.render(
+              React .createElement(Component , {
+              name : "Bob"
+              }),
+              document.getElementById("app")
+              );
+     </script>
+   </body>
+ </html>
+ 
+ 
+ 
+ 
+ propTypes :
+  in compoenets can add property called propTypes to declare list of properties that your component accepts 
+  var Component =React.createClass({
+   propTypes : {
+    name : React.PropTypes.string.isRequired,
+  },
+  render: function(){
+    return React.DOM.span( null , "My name is "  + this.props.name );
+    }
+ });
+ 
+using propTypes is optional , but 2 benefits :
+1. declare openly what properties your component expect 
+2. React does validation of property values at runtime ,
+
+
+PropTypes. * Object.keys(React.PropTypes).join('\n');
+
+* ===
+array 
+bool
+func
+number
+object
+string
+any
+arrayOf
+element
+instanceOf
+node
+objectOf
+oneOf
+oneOfType
+shape
+
+
+
+Default Property values :
+ 
+ var text = 'text' in this.props ? this.props.text : ' ' ; 
+ 
+ not doing this tedious job , of verifying valid input 
+ 
+ car Component = React.createClass({
+ propTypes : {
+   firstName: React.PropTypes.string.isRequired ,
+   middleName: React.PropTypes.string,
+   familyName: React. PropTypes.string.isRequired ,
+   address :React.PropTypes.string ,
+   },
+   
+   getDefaultProps: function(){
+    return {
+    middleName: ' ' ,
+    address: ' n/a',
+    };
+    
+  },
+  
+   render : function(){
+   }
+   
+  });
+  
+  
+  so now 
+  getDefaultProps() returns an object providing sane values for each optioanl property 
+  
+  
+  
+  STATE ::: 
+  old school : was browser DOM manipulation and maintanance 
+  
+  state is the data the component uses to render itself , when the state changes the reac rebuilds the UI itself 
+  
+  UI updates 
+  
+  access the state via this.state 
+  to update the state : 
+   use this.setState()
+   react calls render() method and update the UI 
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+   
