@@ -1,0 +1,56 @@
+downloaded reactbook 
+<html>
+ <head>
+    <title> Hello React </title >
+    <meta charset = "utf - 8 " >
+ </head>
+ <body>
+  <div id = "app">
+   <h1 data-reactid = ".0"> Hello world ! </h1>
+  </div>
+  
+<script src = "react/build/react.js"></script> // includes react lib 
+<script src ="react/build/react-dom.js"></script> // includes react's DOM
+<script>
+ReactDOM.render(
+   React.DOM.h1(null , "Hello World ! " ),
+   document.getElementById("app")
+   );
+ </script>
+ </body>
+</html>
+   
+you define where your application should be placed on the page  <div id = "app"> ... </div>
+
+you can always mix regular HTML content as well as other JS libraries 
+can also have several react React apps on the same page .
+
+
+React object : all API accesible through this , and they are less
+ReactDOM object : render() most useful 
+
+you build your app using components , build your UI using components .
+
+document.getElementById("app") 
+
+used to tell React where the application should be located in the page 
+
+
+DOM--- React : bridge 
+React does the translation from components to underlying platform 
+
+always render one top-level component and it can have as many children components .
+
+
+React.DOM.*
+can use a number of HTML elements as react components via React.DOM object 
+
+
+ReactDOM on the other hand is a way to render the app in the browser 
+
+
+
+
+
+
+
