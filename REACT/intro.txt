@@ -1,10 +1,10 @@
-front-end lib developed by facebook 
+front-end lib developed by facebook to build UI 
 handles the view layer of web and mobile apps 
 reusable UI components
 
 React features : 
 1. JSX : JS syntax extension .
-2.Components : everything is component
+2.Components : everything is component . react uses component to build UI .
 3.unidirectional data flow and flux : React impliments one way data flow , flux is a pattern that helps keeping your data unidirectional
 4.licence 
 
@@ -26,3 +26,4 @@ main difference between state and props :
 props are immutable 
 
 
+react apps run in the browser .
