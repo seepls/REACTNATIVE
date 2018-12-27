@@ -191,7 +191,190 @@ Default Property values :
    
   
   
+Stateful Textarea component ::
+calculates the number of character typed in 
+
+
+
+STATELESS : uses props ! 
+
+var TextAreaCounter = React.createClass({
+ propTypes: { 
+   text : React.PropTypes.string,
+   },
+   
+   getDefaultProps: function(){
+    return {
+     text: ' ' ,
+     };
+    },
+    
+    render: function(){
+      return React.DOM.div( null ,
+      React.DOM.textarea({
+        defaultValue : this.props.text,
+        }),
+        React.DOM.h3(null, this.props.text.length)
+        );
+       }
+     });
+     
+     ReactDOM.render(
+       React.createElement(TextAreaCounter , {
+         text : "BoB",
+         }),
+         document.getElementById("app")
+       );
+       
+to make this STATEFUL : uses state 
+1. add getInitialState() : so you always work with some data 
+getInitialState: function() {
+  return {
+    text : this.props.text ,
+   };
+  },
   
+  
+  initially in getInitialState() : will simoly copy the text property 
+  
+  later when data changes , component update its state using a helper method :
+  
+  _textChange: fuction (ev) {   // event listener : takes ev as object reaches in it to get the text of textarea input 
+   this.setState({
+    text : ev.target.value ,
+    });
+   },
+  
+  
+  always update the state with this.setState() , takes an object and merges it with already existing data in this.state .
+  
+  now upating the render function : to use state 
+  
+  render : function(){
+    return React.DOM.div( null ,
+      React.DOM.textarea({
+       value : this.state.text,
+       onChange: this._textChange,
+      }),
+      React.DOM.h3(null , this.state.text.length)
+    );
+  }
+
+
+DOM Events :::::
+
+onChange: this._textChange 
+
+
+event handling earlier !  ( teddious ) 
+
+
+earlier all inline event handlers 
+like : <button onclick = "doStuff" >
+inefficient to have too many event listener like this 
+also hard to have more than one listener on the same button 
+
+hence , people in DOM world use : 
+ element.addEventListener to set up listeners -> have code in 2 places or more 
+ 
+ event delegation : 
+  to address the performance issue : means u listen to events at some parent node , say <div> that has many buttons , and set up one listener for all buttons 
+  
+<div id = "parent">
+  <button id = "ok" > OK </button>
+  <button id = "cancel"> Cancel </button>
+</div>
+
+<script>
+document.getElementById('parent').addEventListener('click',function(event){
+  var button = event.target ;
+  switch (button.id){
+   case 'ok':
+     console.log('OK!');
+     break ;
+   case 'cancel':
+     console.log('Cancel');
+     break ;
+   default : 
+     new Error('Unexpected button ID');
+   };
+});
+</script>
+ 
+
+ EVENT HANDLING IN REACT :
+  rely  on : event.target in all browser 
+  
+  keeps the UI and the event listener together .
+  
+  -event.target
+  -event.stopPropagation()
+  -event.preventDefault()
+  - event.onClick()
+  - event.nativeEvent  // need the original browser event
+  
+  
+  PROPS VS STATE : 
+  properties are mechanism to configure your component
+  state : internal data maintenacne 
+  this.properties === arguments passed to class constructor 
+  this.state === private properties 
+  
+  
+  Accessing component from outside :
+  
+  react designed to work with any pre-existing codebase you might have . 
+  1 . to have react app communicate with the outside world is to get a reference to a component you render 
+  ReactDOM.render()
+  
+  var myTextAreaCounter = ReactDOM.render(
+    React.createElement(TextAreaCounter , {
+      defaultValue : "bob",
+      }),
+      document.getElementById("app")
+      );
+      
+      
+      to set a new state : 
+      myTextAreaCounter.setState({text: "hello new me !"});
+      
+      reference to the main parent DOM , 
+      var reactAppNode = ReactDOM.findDOMNode(myTextAreaCounter);
+      reactAppNode.parentNode === document.getElementById('app');
+      
+      myTextAreaCounter.props;
+      myTextAreaCounter.state ;
+      
+      changing Properties Mid-Flight : 
+      
+      rather than : myTextAreaCounter.setState({text : 'me'});
+      
+      use 
+      
+      componentWillReceiveProps : function(newProps){
+       this.setState({
+         text : newProps.defaultValue,
+         });
+        },
+        
+        this method recieves new props object and u can change the state accordingly 
+        
+        
+ LIFECYCLE METHODS ::
+ usr the lifecycle methods to listen to changes in your component 
+ -componentWillUpdate()
+ - componentWillReceiveProps()
+ - componentDidUpdate()
+ -  componentWillMount()
+ - componentDidMount()
+ - componentWillUnmount() 
+ - shouldComponentUpdate(newProps ,newState) 
+ 
+ 
+ 
+ 
+     
+     
   
   
   
