@@ -11,6 +11,7 @@ downloaded reactbook
   
 <script src = "react/build/react.js"></script> // includes react lib 
 <script src ="react/build/react-dom.js"></script> // includes react's DOM
+the react DOM helps react render () in the browser DOM 
 <script>
 ReactDOM.render(
    React.DOM.h1(null , "Hello World ! " ),
@@ -53,4 +54,33 @@ ReactDOM on the other hand is a way to render the app in the browser
 
 
 
+A STATIC WEB APP : 
+HTML : 
+<div id ="app"> </div>
+CSS: 
+.person {
+  border : 5px solid #eee;
+  box-shadow : 0 2px 2px #ccc ;
+  background-color: #a3d5d3;
+  width: 20 px;
+  padding: 20 px;
+}
 
+JS ( BABEL) 
+function Person(props){
+ return   ( // has the actual code i want to render to DOM
+ <div className = "person">
+  <h1>{props.name }  </h1>
+  <p> my age is : {props.age } ! </p>
+</div>
+ ); 
+}
+
+var app = (
+  <div>
+     <Person name= "smriti" age = "18" />
+     <Person name = "priya" age = "19" />
+    </div>
+);
+
+ReactDOM.render(app, document.querySelector('#app'));
