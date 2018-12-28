@@ -1,0 +1,111 @@
+DATA FIRST :
+
+1. array of data and array of header :
+var headers = [ " book" , "author " , " language " , "published" , " sales " ];
+var data = [
+[...],
+[...],
+];
+
+Table HEADER LOOP :
+first step is just to display the header 
+
+
+
+var Excel  = React.createClass({
+ render: function(){
+  return(
+    React.DOM.table(null,
+      React.DOM.thead(null ,
+       React.DOM.tr( null ,
+          this.props.headers.map(function(title){ // map() returns an array of children component 
+            return React.DOM.th(null , title);
+            })
+           )
+         )
+       )
+     );
+   }
+ });
+ 
+ 
+ ReactDOM.render(
+  React.createElement( Excel ,{
+    headers : headers ,
+    initialData : data ,
+    }),
+   document.getElementById("app")
+   );
+   
+ map () : 
+ - returns a array of children components 
+ takes each element and passes it to a call back function 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ getInitialState : function(){
+  return {data : this.props.initialData};
+  },
+  
+  render : function() {
+    return ( 
+     React.DOM.table(null , 
+      React.DOM.thead( null , 
+        React.DOM.tr(null , 
+         this.props.headers.map(function(title, idx){
+           return React.DOM.th({key : idx } , title );
+           })
+          )
+         ),
+         React.DOM.tbody( null ,
+           this.state.data.map(function(title , idx){
+             return React.DOM.th({key : idx } ,
+                 row.map(function(row , idx ){
+                   return React.DOM.td({key: idx},cell);
+                   })
+                 )
+               );
+          })
+  
+ SORTING ::
+ 
+ add a click handler :
+ 
+  React.DOM.table(null , 
+      React.DOM.thead( {onClick: this.sort},
+        React.DOM.tr(null ,
+  //.....
+ 
+ 
+ var column = e.target.cellIndex ; // which column to sort 
+ need to copy the data : 
+ var data = this.state.data.slice();
+ 
+ data.sort(function(a,b){
+   return a[column] > b[column] ? 1 : -1  ; 
+   });
+ this.setState({
+  data : data ,
+  });
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
