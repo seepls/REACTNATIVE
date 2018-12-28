@@ -1,0 +1,14 @@
+till now : UI in render() 
+
+1. Hello World 
+ReactDOM.render(
+ <h1 id = " heading">
+  <span> HELLO WORLD! </span>
+ </h1>
+ document.getElementById('app')
+);
+
+Transpilation : 
+
+Babel : 
+
