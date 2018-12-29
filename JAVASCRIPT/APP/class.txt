@@ -1,3 +1,11 @@
+topics : 
+- highlights
+- class 
+- spread and rest operator (...)
+- destructuring 
+
+
+
 knowledge of html :
 tut : JS 
 Inside a host environment , JS connected to objects of its environment to provide programmic control over them.
@@ -23,3 +31,53 @@ JAVA VS JS
    can automatically write to harddisk in java.
    
  
+class ::
+are blueprint of objects 
+property and method 
+
+
+spread and rest operators : 
+spread ::: used to split up array elements or object properties 
+rest : used to merge a list of function argument into an array 
+
+
+example of spread operator : 
+1.
+const numbers = [1,2,3,4] ;
+const newNumbers = [... numbers , 5,6 ]; 
+console.log(newNumbers) ;  // use of spread ...
+out put : [1, 2, 3, 4, 5, 6]
+
+2. 
+const person = {
+  name : 'smriti'
+};
+const newPerson = {
+  ... person,
+  age: 19 
+};
+
+console.log(newPerson);
+
+output : 
+[object Object] {
+  age: 19,
+  name: "smriti"
+}
+
+example of rest : 
+const filter = (...args)=>{
+  return args.filter(el => el ===1 ) ;
+}
+
+console.log(filter(1,2,3));
+output :: [1]
+
+
+
+destructuring :::
+easily extract SINGLE  array elements or object properties and store them in variables 
+
+array destructuring and object destructuring 
+[a ,b ] = ['smriti','priya']
+
