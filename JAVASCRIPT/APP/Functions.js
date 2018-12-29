@@ -86,6 +86,13 @@ function square ( number ){
                              
  
  
+ arrow function :::
+syntax
+const func = (// parameters ) =>{
+ ...
+}
+  
+ called exactly like normal function e.i func(smriti);
                                  
                                  
   
