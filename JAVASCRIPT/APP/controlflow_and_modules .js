@@ -82,3 +82,24 @@
  //if finally block returns a value then this value becomes the return value of the whole try-catch-finally production 
  
  
+export and import modules ::: 
+
+say : 
+ 
+ const person = {
+   name : 'smriti'
+ }
+
+export default person 
+
+another be : 
+export const clean = () =>{
+}
+export const baseData = 10;
+
+now say to import in app.js : 
+import person from './person.js'; // takes the default 
+import prs from './person.js'; // takes the default of person.js 
+import {baseData ,clean} from './utility.js'
+
+
