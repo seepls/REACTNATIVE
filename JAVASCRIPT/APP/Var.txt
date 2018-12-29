@@ -70,6 +70,13 @@ parseFloat()
  
 
 
+variables earlier as var :
+now as let and const 
+
+
+let = vaiables values 
+const = variable constant
+ 
  
   
 
