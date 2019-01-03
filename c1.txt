@@ -22,3 +22,15 @@ reactnative exposes javascript interfaces for platform APIs , so that the app ca
 major difference : reactnative does all this by maximizing the usage of the UI libraires of the host rather than HTML and CSS markup
 
 react native improvement over normal mobile app development : developer experience and cross-platform development potential 
+
+
+
+
+
+as we know react native is based on components : 
+2 kinds 
+1. functional component  :
+      used for presenting static data ,cant fetch data
+2.class component : 
+      used for dynamic source of data 
+      
