@@ -1,0 +1,65 @@
+SPA : single page application
+
+general structure : 
+- css
+- images
+- index.html // to link them all 
+- js
+  -- build // browser fiendly scripts
+  -- source // scripts with JSX syntax
+- scripts // host command line script 
+
+further there are :  [DIVIDE AND CONQUER ]
+- general app wide files 
+- file associated with specific component
+
+js/source/components/components.js --> impliment the components
+css/components/components.js --> for styling
+
+
+
+index.html : 
+must include 
+- all CSS in bundle.css file 
+- all js in bundle.js [ includes app as well as components and their lib dependencies ]
+
+how to produce these bundles ????
+
+
+
+CSS :
+/css/app.css : common app wide style 
+specific styles for each component
+convention having one css file per react component and having them in css / components
+
+impliment the react component in /js/source/components
+
+and write all the use in /js/source/app.js
+
+JS :
+/js/source/app.js
+is where it all began 
+ impliment the components in js/source/components/
+ 
+ 
+***
+no random properties in object , only methods .
+if you need a property assign it to this inside of constructor 
+method syntax is : render(){}
+
+'use strict ' ;
+
+build app : 
+1.CSS concatenation 
+2.JS Transpilation
+3.JS packaging 
+
+JS transpile :::
+all files from js/source and transpile them using React and ES2015 . add them to js/build 
+
+Package JS : 
+Package CSS :
+using cat concatnate all CSS file to  one 
+
+
+
