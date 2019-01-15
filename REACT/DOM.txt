@@ -1,0 +1,10 @@
+DOM is an interface .helps prog. lang .to  manipulate the content, structure, and style of a website
+ JS connets to DOM in the browser .
+ 
+ 
+ what is a browser ?
+   is a program that interprets HTML and CSS and renders the style, content, and structure into the page that you see.
+   
+ DOCUMENT OBJECT:
+ The document object is a built-in object that has many properties and methods that we can use to access and modify websites.
+ 
