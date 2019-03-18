@@ -16,3 +16,6 @@ concept for resuing code : mixin
   
   
   
+JavaScript : can only inherit from single object .and a class may extend only one class.
+MIXIN used to add the behavior to other classes.
+Mixin – is a generic object-oriented programming term: a class that contains methods for other classes.
