@@ -1,0 +1,9 @@
+concept for resuing code : mixin
+
+- mixin is a JS object that contains a collection of methods and properties 
+- not meant to be used on its own , included into another object's properties 
+
+
+  
+  
+  in rea
