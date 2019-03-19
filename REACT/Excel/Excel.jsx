@@ -118,7 +118,135 @@ class Excel extends Component {
           throw Error('Unexpected dialog type ${this.state.dialog.type}');
       }
     }
+      
+    _renderDeleteDialog(){
+      const first = this.state.data[this.state.dialog.idx];
+      const nameguess = first[Object.keys(first)[0]];
+      return (
+        <Dialog
+           modal = {true}
+           header = "Confirm Deletion"
+           confirmLabel="Delete"
+           onAction={this._deleteConfirmationClick.bind(this)}
+        >
+          {Are you sure you want to delete?}
+        </Dialog>
+       );
+    }
     
+    _renderFormDialog(readonly){
+       return (
+         <Dialog
+           modal={true}
+           header={readonly ? 'item info' : 'edit item'}
+           confirmLabel={readonly ? 'ok' : 'Save'}
+           hasCancel={!readonly}
+           onAction={this._saveDataDialog.bind(this)}
+         >
+         <Form
+           ref="form"
+           fields={this.props.schema}
+           initialData={this.state.data[this.state.dialog.idx]}
+           readonly={readonly}/>
+         </Dialog>
+       );
+     }
+     
+     _renderTable(){
+       return (
+         <table>
+           <thread>
+             <tr>{
+                this.props.schema.map(item => {
+                  if(!item.show) {
+                    return null;
+                  }
+                  let title = item.label;
+                  if(this.state.sortby === item.id) {
+                    title += this.state.descending ? ' ' : '' ;
+                  }
+                  return (
+                    <th
+                      className= {''}
+                      key= {item.id}
+                      onClick= {this._sort.bind(this,item.id)}
+                    >
+                      {title}
+                    </th>
+                  );
+                },this)
+              }
+              <th className = "ExcelNotSortable">Actions</th>
+              </tr>
+             </thead>
+             <tbody onDoubleClick={this._showEditor.bind(this)}>
+               {this.state.data.map((row, rowidx) => {
+                 return (
+                   <tr key={rowidx}>{
+                     Object.keys(row).map((cell, idx) => {
+                       const schema = this.props.schema[idx];
+                       if(!schema || !schema.show){
+                         return null;
+                       }
+                       const isRating = schema.type === 'rating';
+                       const edit = this.state.edit;
+                       let content = row[cell];
+                       if(!isRating && edit && edit.row === rowidx && edit.key === schema.id){
+                         content = (
+                           <form onSubmit={this._save.bind(this)}>
+                             <FormInput ref="input" {...schema} defaultValue={content}/>
+                           </form>
+                         );
+                       }else if (isRating) {
+                         content = <Rating readonly = {true} defaultValue = {Number(content)}/>;
+                       }
+                       return (
+                         <td
+                           className = {classNames({
+                             ['schema']: true,
+                             'ExcelEditable':!isRating,
+                             'ExcelDataLeft':schema.align === 'left',
+                             'ExcelDataRight':schema.align === 'right',
+                             'ExcelDataCenter':schema.align === 'left' && schema.align !== 'right',
+                           })}
+                           key={idx}
+                           data-row={rowidx}
+                           data-key={schema.id}>
+                           {content}
+                          </td>
+                         
+                        );
+                     },this)}
+                     <td className="Excel Data ">
+                       <Actions onAction={this._actionClick.bind(this, rowidx)}/>
+                     </td>
+                     
+                    </tr>
+                  );
+               },this)}
+           </tbody>
+          </table>
+         );
+     }
+    }
+    
+    Excel.propTypes = {
+      schema: PropTypes.arrayOf(
+        PropTypes.object
+      ),
+      initialData: PropTypes.arrayOf(
+        PropTypes.object
+      ),
+      onDataChange: PropTypes.func ,
+    };
+    
+    export default Excel
+                      
+         
+           
+    
+      
+ 
     
         
       
