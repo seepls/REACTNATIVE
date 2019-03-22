@@ -21,3 +21,20 @@ AJAX :
 3.Behind-the-scenes data fetches using XMLHttpRequest objects in the browser.
 4. JS for everything
 
+-------------------------------------------------------------------------
+AJAX USED WITH 
+1.JAVASCRIPT : JS function called when an event occurs in a page 
+2.DOM :
+ API accessing and manipulating structured document 
+3.XMLHttpRequest :
+JS object performs asynchronous interaction with server 
+--------------------------------------------------------------------------
+
+steps : 
+-A client event occurs
+-An XMLHttp Request object created and configured
+- object makes asynchronous call to the server 
+- server returns XML document
+- XMLHttpRequest object calls the callback() function and processes the result.
+- HTML DOM is updated.
+--------------------------------------------------------------------------
