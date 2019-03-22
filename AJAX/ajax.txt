@@ -1,0 +1,23 @@
+Asynchronous Javascript and XML
+AJAX technique more interactive web application [XML , HTML , CSS , Java Script]
+Ajax : uses 
+- XHML : content 
+- CSS : presentation 
+- Document Object Model and JS for dynamic content display 
+
+CONVENTIONAL METHOD :
+web app transmit data to and from server using synchronous requests. fill a form hit and get directed to new page 
+
+WITH AJAX : 
+JS makes request to the server , interprets results and update the current page .
+
+XML : Format for receiveing server data 
+
+[ DATA DRIVEN THAN PAGE DRIVEN ]
+
+AJAX : 
+1.Browser based presentation : CSS + HTML 
+2.DATA stored in XML format : fetched using server
+3.Behind-the-scenes data fetches using XMLHttpRequest objects in the browser.
+4. JS for everything
+
