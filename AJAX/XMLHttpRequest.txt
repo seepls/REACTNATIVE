@@ -1,0 +1,27 @@
+methods :
+1.abort(): cancel the current request
+2.getAllResponseHeaders(): returns the complete set of HTTP headers as a string 
+3.getResponseHeader(headerName): returns value of specific  HTTP header 
+4.open(method ,URL)
+5.open(method, URL , async,userName)
+6.open(method, URL , async,userName,password)
+The "async" parameter specifies whether the request should be handled asynchronously or not.
+7.send(content):sends the request
+8. setRequestHeader(label,value):adds a label value pair to HTTP header   to be sent 
+
+
+properties:
+1. onreadystatechange:
+an event handler for event that fires at every event change
+2.readyState : current state of the XMLHttpRequest object.
+0
+1
+2
+3
+4
+
+3.responseText:returns response as a string
+4.responseXML :returns the response as XML. property returns an XML document object .
+5.status : returns status as a number 
+6. statusText : returns status as a string
+
